@@ -14,11 +14,11 @@ class App extends React.Component {
     user: "anton",
   };
 
-  render() {
-    const { user } = this.state;
+  testFunc = () => console.log("test");
 
+  render() {
     return (
-      <AppContext.Provider user={user}>
+      <AppContext.Provider value={{ ...this.state, testFunc: this.testFunc }}>
         <Router>
           <Switch>
             <Layout>

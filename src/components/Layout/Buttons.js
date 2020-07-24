@@ -4,6 +4,10 @@ import ButtonDrk from "./ButtonDrk";
 import { AppContext } from "../App";
 
 class Buttons extends React.Component {
+  componentDidMount() {
+    this.props.testFunc();
+  }
+
   render() {
     return (
       <>
@@ -17,8 +21,7 @@ class Buttons extends React.Component {
 export default () => (
   <AppContext.Consumer>
     {(context) => {
-      console.log(context);
-      return <Buttons user={context} />;
+      return <Buttons user={context.user} testFunc={context.testFunc} />;
     }}
   </AppContext.Consumer>
 );
