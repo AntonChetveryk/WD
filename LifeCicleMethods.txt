@@ -1,0 +1,31 @@
+1. Mounting
+
+- constructor - инициализация компонентов
+
+- componentWillMount - (устаревший)
+
+- componentDidMount - вызывается раз при монтировании элемента 
+
+
+2. Updating
+
+- componentWillReceiveProps - (устаревший)
+
+- shouldComponentUpdate - должен ли компонент обновиться (true or false) нельзя вызывать setState
+
+- componentWillUpdate - (устаревший)
+
+- componentDidUpdate -  после render в ручную проверяем есть ли изменения props или state
+
+3. Unmounting
+
+- componentWillUnmount - очистка setTimeout и т.д.
+
+
+
+
+
+
+
+
+
