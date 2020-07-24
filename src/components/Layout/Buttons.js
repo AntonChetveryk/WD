@@ -18,10 +18,16 @@ class Buttons extends React.Component {
   }
 }
 
-export default () => (
+const ButtonContainer = (props) => (
   <AppContext.Consumer>
     {(context) => {
-      return <Buttons user={context.user} testFunc={context.testFunc} />;
+      return (
+        <Buttons user={context.user} testFunc={context.testFunc} {...props} />
+      );
     }}
   </AppContext.Consumer>
 );
+
+ButtonContainer.displayName = "ButtonContainer";
+
+export default ButtonContainer;

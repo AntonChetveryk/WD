@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import AppContextHOC from "../../HOC/AppContextHOC";
 
 class Layout extends React.Component {
   render() {
@@ -22,6 +23,9 @@ class Layout extends React.Component {
           <Link to="/buttons-hoc" className="mr-2">
             ButtonsHOC
           </Link>
+          <Link to="/react-hoc" className="mr-2">
+            ReactHOC
+          </Link>
         </nav>
         {children}
       </div>
@@ -29,4 +33,4 @@ class Layout extends React.Component {
   }
 }
 
-export default Layout;
+export default AppContextHOC(Layout);
