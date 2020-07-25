@@ -26,6 +26,9 @@ class Layout extends React.Component {
           <Link to="/react-hoc" className="mr-2">
             ReactHOC
           </Link>
+          <Link to="/todo-app" className="mr-2">
+            TodoApp
+          </Link>
         </nav>
         {children}
       </div>

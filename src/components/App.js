@@ -7,6 +7,7 @@ import Form from "./pages/Form";
 import HOC from "./pages/HOC";
 import Buttons from "./Layout/Buttons";
 import ReactHOC from "./pages/ReactHOC/ReactHOC";
+import TodoApp from "../components/pages/TodoApp/TodoApp";
 
 export const AppContext = React.createContext();
 
@@ -29,6 +30,7 @@ class App extends React.Component {
               <Route path="/hoc" component={HOC} />
               <Route path="/buttons-hoc" component={Buttons} />
               <Route path="/react-hoc" component={ReactHOC} />
+              <Route path="/todo-app" component={TodoApp} />
             </Layout>
           </Switch>
         </Router>
